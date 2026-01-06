@@ -10,56 +10,66 @@
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
     </style>
     <script src="https://kit.fontawesome.com/ab9ff73896.js" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+    <script src="index.js"></script>
 </head>
 
 <body>
     <nav>
-        <figure class="nav__logo--wrapper">
-            <img src="./Assets/blinker-icon.4f9b2663.png" class="nav__logo" alt="">
-        </figure>
-        <ul class="nav__links">
-            <li class="nav__link--item">
-                <a href="#" class="nav__link nav__link--hover-effect">Home</a>
-            </li>
-            <li class="nav__link--item" onclick="newPage()">
-                <a href="#" class="nav__link nav__link--hover-effect">Find your car</a>
-            </li>
-            <li class="nav__link--btn">
-                <button class="nav__btn">
-                    CONTACT
-                    <!-- <a href="#" target="_blank" class="btn__link">CONTACT</a> -->
-                </button>
-            </li>
-        </ul>
-    </nav>
-    <div class="container">
-        <div class="row">
-            <div class="header">
-                <h1 class="header__title">
-                    US's most awarded car subscription platform
-                </h1>
-                <h2 class="header__sub-title">
-                    FIND YOUR DREAM CAR WITH <span class="purple">BLINKER</span>
-                </h2>
-                <div class="header__search">
-                    <input type="text" placeholder="Search by Model, Make or Keyword" class="header__search--bar">
-                    <button class="header__search--icon">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="nav__section--home">
+            <figure class="nav__logo--wrapper">
+                <img src="./Assets/blinker-icon.4f9b2663.png" class="nav__logo" alt="">
+            </figure>
+            <ul class="nav__links">
+                <li class="nav__link--item">
+                    <a href="#" class="
+                    nav__link 
+                    link__hover-effect 
+                    link__hover-effect--black">Home</a>
+                </li>
+                <li class="nav__link--item" onclick="showMovieBrowser()">
+                    <a href="#" class="
+                    nav__link 
+                    link__hover-effect 
+                    link__hover-effect--black">Find your movie</a>
+                </li>
+                <li class="nav__link--btn">
+                    <button class="nav__btn">
+                        CONTACT
+                        <!-- <a href="#" target="_blank" class="btn__link">CONTACT</a> -->
                     </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section id="header">
+        <div class="container">
+            <div class="row">
+                <div class="header__info">
+                    <h1 class="header__title">
+                        US's Most Awarded Video Rental Service Platform
+                    </h1>
+                    <h2 class="header__sub-title">
+                        FIND YOUR DREAM CAR WITH <span class="purple">BLINKER</span>
+                    </h2>
+                    <div class="header__search">
+                        <input type="text" placeholder="Search by Model, Make or Keyword" class="header__search--bar">
+                        <button class="header__search--icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
                 </div>
                 <figure class="header__img--wrapper">
                     <img src="./Assets/building.681ea6bf.png" alt="" class="header__building">
                     <img src="./Assets/Car_img.png" alt="" class="header__car">
                     <div class="header__car--tires">
-                        <img src="./Assets/Car_Tire.png" alt="" class="header__tire1">
-                        <img src="./Assets/Car_Tire.png" alt="" class="header__tire2">
+                        <img src="./Assets/Car_Tire.png" alt="" class="header__tire header_tire--left">
+                        <img src="./Assets/Car_Tire.png" alt="" class="header__tire header_tire--right">
                     </div>
                     <img src="./Assets/Car_blinker.png" alt="" class="header__car--headlights">
                 </figure>
             </div>
         </div>
-    </div>
+    </section>
 </body>
 
 </html>

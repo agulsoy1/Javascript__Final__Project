@@ -19,7 +19,7 @@ a{
 
 .row{
     width: 100%;
-    max-width: 800px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -47,13 +47,17 @@ NAV
 */
 
 nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
     width: 100%;
     max-width: 1200px;
     padding: 50px 0;
     margin: 0 auto;
+}
+
+.nav__section--home{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav__links{
@@ -78,27 +82,27 @@ nav{
     color: black;
 }
 
-.nav__link--hover-effect:after{
+.link__hover-effect:after{
     content: "";
     position: absolute;
     top: 25px;
     right: 0;
     width: 0;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid;
     transition: all 300ms ease;
 }
 
-.nav__link--hover-effect:hover:after{
+.link__hover-effect:hover:after{
     width: 100%;
     left: 0;
 }
 
-.nav__link:active{
-    /* color: #6030b1; */
+.link__hover-effect--black{
+    color: black;
 }
 
-.btn__link{
-    /* color: white; */
+.link__hover-effect--white{
+    color: white;
 }
 
 .nav__logo{
@@ -129,13 +133,15 @@ HEADER
 
 */
 
-.header{
+.header__info{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* max-width: 1100px; */
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .header__title{
@@ -190,7 +196,8 @@ HEADER
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    /* max-width: 500px; */
+    width: 100%;
+    max-width: 500px;
 }
 
 .header__building{
@@ -222,22 +229,33 @@ HEADER
 
 .header__car--tires{
     position: absolute;
-    display: flex;
-    justify-content: space-evenly;
     top: 635px;
-    left: -290px;
+    left: -40px;
+    width: 100%;
+    max-width: 100px;
 }
 
-.header__tire1{
+.header__tire{
+    position: absolute;
+    top: 0;
+    left: 465px;
     width: 9vh;
     height: 9vh;
-    margin-right: 345px;
 }
 
-.header__tire2{
-    width: 9vh;
-    height: 9vh;
+.header_tire--left{
+    position: absolute;
+    margin-left: -465px;
 }
+
+/* .header__tire2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 9vh;
+    height: 9vh;
+} */
 
 .header__car--headlights{
     position: absolute;
@@ -249,13 +267,9 @@ HEADER
 
 /* 
 
-CAR NAV
+MOVIE NAV
 
 */
-
-.top{
-    position: relative; 
-}
 
 .bg__img--wrapper{
     position: relative;
@@ -279,24 +293,18 @@ CAR NAV
 
 }
 
-.nav__logo--white{
+/* .nav__logo--white{
     filter: rgba(255, 255, 255, 0);
-}
+} */
 
-.nav__section{
-    position: absolute;
+.nav__browse{
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    top: 0;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1100px;
     padding: 24px 0;
-}
-
-.nav__link--white{
-    color: white;
 }
 
 .nav__btn--contrast{
@@ -317,69 +325,75 @@ CAR NAV
     color: white;
 }
 
-.browse__title{
+/* 
+
+MOVIE TOP
+
+*/
+
+.top__info{
     position: absolute;
+    top: 100px;
+    width: 100%;
+}
+
+.browse__title{
     display: flex;
     justify-content: center;
     align-items: center;
-    top:8.5vh;
-    left: 0;
     width: 100%;
     font-size: 45px;
     font-weight: 500;
     letter-spacing: 5px;
     color: white;
+    margin-bottom: 20px;
 }
 
 .browse__search{
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    top: 16vh;
-    left: 0;
 }
 
 .browse__searchbar{
-    position: relative;
+    position: absolute;
+    top: 5px;
     padding: 20px 16px;
     width: 100%;
     max-width: 550px;
     font-size: 20px;
     border: none;
-    border-radius: 30px;;
+    border-radius: 30px;
 }
 
 .browse__search--icon{
     position: absolute;
-    top: 1vh;
-    left: 67vw;
+    top: 1.5vh;
+    left:65vh;
     width: 100%;
     font-size: 30px;
     color: #6030b1;
     transition: all 300ms ease;
-}
-
-.fa-magnifying-glass{
     cursor: pointer;
-    transition: all 300ms ease;
 }
 
-.fa-magnifying-glass:hover{
+.browse__search--icon:hover{
     color: #ff328f;
 }
 
 /* 
 
-    CAR MAIN
+    MOVIE MAIN
 
 */
 
-.middle{
+.middle__section--info{
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    align-items: center;
+    padding-bottom: 45px;
 }
 
 .middle__title{
@@ -391,3 +405,64 @@ CAR NAV
     font-size: 20px;
     font-weight: 700;
 }
+
+.movie__tag{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 20px;
+    border-radius: 5px;
+    background-image: url(./Assets/radial-gradient__inner.png), linear-gradient(to bottom, rgb(255,215,0), rgb(255,0,0));
+    /* background-blend-mode: color-burn; */
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width: 200px;
+}
+
+/* .movie__tag--overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .25;
+} */
+
+.movie__poster--wrapper{
+    max-width: 150px;
+}
+
+.movie__poster{
+    width: 100%;
+}
+
+.movie__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.movie__title{
+    font-size: 20px;
+    font-weight: 900;
+    padding: 5px 0;
+}
+
+.movie__year{
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+
+.movie__imdb{
+    font-size: 14px;
+    font-weight: 500;
+}
+
