@@ -372,7 +372,7 @@ MOVIE TOP
     position: absolute;
     top: 1.5vh;
     left:65vh;
-    width: 100%;
+    /* width: 100%; */
     font-size: 30px;
     color: #6030b1;
     transition: all 300ms ease;

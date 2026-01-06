@@ -1,13 +1,12 @@
-// const movieTagElement = document.querySelector(".movie_tag");
+// const movieTagElement = document.querySelector(".movie__tag");
+// const response = await fetch(`https://omdbapi.com/?apikey=6d4005a9&s=fast`);
+// const searchTerm = document.querySelector(".browse__searchbar");
+const searchTerm = document.querySelector(".browse__searchbar");
+const movieTagElement = document.querySelector(".movie__tag");
 
 async function searchMovies(event){
-    const searchTerm = "";
-    // const searchTerm = document.querySelector(".browse__searchbar");
-    // const searchTerm = event.target.value;
-    const response = await fetch(`https://omdbapi.com/?apikey=6d4005a9&s=fast`);
-    // const response = await fetch(`https://www.omdbapi.com/?apikey=6d4005a9&s=${searchTerm}`);
+    const response = await fetch(`https://www.omdbapi.com/?apikey=6d4005a9&s=${searchTerm}`);
     const movieData = await response.json();
-    const movieTagElement = document.querySelector(".movie_tag");
     console.log(movieData);
     movieTagElement.innerHTML = movieData.map((movie) => displayMovies(movie)).join("");
 }
