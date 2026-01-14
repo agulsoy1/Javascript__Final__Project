@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blinker2</title>
     <link rel="stylesheet" href="style.css">
-    <script src="movie.js"></script>
+    <script src="movie.js" defer></script>
     <script src="https://kit.fontawesome.com/ab9ff73896.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <section id="top">
         <figure class="bg__img--wrapper">
-                <img src="./Assets/carpark_bg.png" alt="" class="bg__img">
+                <img src="./Assets/movie__bg__img.png" alt="" class="bg__img">
                 <div class="bg__img--overlay"></div>
         
         <nav class="nav__browse">
@@ -21,8 +21,8 @@
             <ul class="nav__links">
                 <li class="nav__link--item" onclick="showHomePage()">
                     <a href="#" class="
-                    nav__link nav__link--white 
-                    link__hover-effect 
+                    nav__link nav__link--white
+                    link__hover-effect
                     link__hover-effect--white">Home</a>
                 </li>
                 <li class="nav__link--item">
@@ -42,10 +42,8 @@
         <div class="top__info">
             <h1 class="browse__title">Browse our movies</h1>
             <div class="browse__search">
-                <input type="text" class="browse__searchbar" placeholder="Search by Title, Release Date, or Keyword">
-                <figure class="browse__search--icon" onclick="searchMovies(event)">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </figure>
+                <input type="text" class="browse__searchbar" placeholder="Search by Title, or Keyword">
+                <i class="fa-solid fa-magnifying-glass browse__search--icon" onclick="searchMovies(event)"></i>
             </div>
         </div>
         </figure>
@@ -61,15 +59,17 @@
                         Price range: <span class="purple">$0 to $100,000</span>
                     </p>
                 </div>
-                <div class="movie__tag">
+                <div class="movie__loading--state">
+                    <i class="fa-solid fa-spinner books__loading--spinner"></i>
+                </div>
+                <div class="movie__display">
                     <figure class="movie__poster--wrapper">
                         <!-- <img src="./Assets/dotted__pattern__top2bottom.png" class="movie__tag--overlay" alt=""> -->
                         <img src="" class="movie__poster" alt="">
                     </figure>
                     <div class="movie__info">
                         <h3 class="movie__title">Movie Title</h3>
-                        <div class="movie__year">Release Date</div>
-                        <div class="movie__imdb">IMDB ID: IMDBID</div>
+                        <div id="movie__year">Release Date</div>
                     </div>
                 </div>
             </div>
