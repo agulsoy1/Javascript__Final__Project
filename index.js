@@ -18,6 +18,5 @@ homeSearchBar.addEventListener('keydown', function(event){
 
 function showMovieBrowser(){
     localStorage.setItem("query", homeSearchTerm);
-    searchMovies(homeSearchTerm);
     window.location.href = `${window.location.origin}/movie.html#`;
 }
