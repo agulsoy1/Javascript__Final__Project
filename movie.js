@@ -21,7 +21,6 @@ function showLoading() {
 
 async function searchMovies(event) {
   const searchTerm = searchBar.value;
-//   const query = localStorage.getItem("query");
   const searchTermValue = query || searchTerm;
   const response = await fetch(
     `https://www.omdbapi.com/?apikey=6d4005a9&s=${searchTermValue}`

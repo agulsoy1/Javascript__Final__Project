@@ -1,6 +1,5 @@
 const homeSearchBtn = document.querySelector(".header__search--icon");
 const homeSearchBar = document.querySelector(".header__search--bar");
-const homeSearchTerm = homeSearchBar.value;
 
 homeSearchBtn.addEventListener('click', function(event){
     if(event.type === "click"){
@@ -17,6 +16,7 @@ homeSearchBar.addEventListener('keydown', function(event){
 });
 
 function showMovieBrowser(){
+    const homeSearchTerm = homeSearchBar.value;
     localStorage.setItem("query", homeSearchTerm);
     window.location.href = `${window.location.origin}/movie.html#`;
 }
