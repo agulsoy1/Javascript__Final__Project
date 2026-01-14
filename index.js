@@ -2,28 +2,22 @@ const homeSearchBtn = document.querySelector(".header__search--icon");
 const homeSearchBar = document.querySelector(".header__search--bar");
 const homeSearchTerm = homeSearchBar.value;
 
-function movieBrowser(query){
-    localStorage.setItem("query", homeSearchTerm);
-    homeSearchBtn.addEventListener('click', function(event){
-        if(event.type === "click"){
-            event.preventDefault();
-            showMovieBrowser();
-        }
-    })
-    searchBar.addEventListener('keydown', function(event){
-        if(event.key === "Enter"){
-            event.preventDefault();
-            showMovieBrowser();
-        }
-    })
-    window.location.href = `${window.location.origin}/movie.html#`;
-    searchMovies();
-};
+homeSearchBtn.addEventListener('click', function(event){
+    if(event.type === "click"){
+        event.preventDefault();
+        showMovieBrowser();
+    }
+});
 
-// searchMovies();
+homeSearchBar.addEventListener('keydown', function(event){
+    if(event.key === "Enter"){
+        event.preventDefault();
+        showMovieBrowser();
+    }
+});
 
 function showMovieBrowser(){
-    // searchMovies(searchTerm);
-    console.log(searchMovies())
+    localStorage.setItem("query", homeSearchTerm);
+    searchMovies(homeSearchTerm);
     window.location.href = `${window.location.origin}/movie.html#`;
 }
