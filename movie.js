@@ -79,71 +79,68 @@ optionSelect.addEventListener('change', async (event) => {
     const data = await searchMovies();
     const year = data.Search[0].Year;
     console.log(year);
-    // const selectedOption = event.target.value;
-    // console.log(selectedOption);
-    // if(movieData){
-    //     console.log(movieData);
-    // }
-
-    // switch(selectedOption){
-    //     case 'None':
-    //         movieDisplayELem.style.display = 'block';
-    //         break;
-    //     case '1950s':
-    //         if(1950 <= year && year <= 1959){
-    //             movieDisplayELem.style.display = 'block';
-    //         }else{
-    //             movieDisplayELem.style.display = 'none';
-    //         }
-    //         break;
-    //     case '1960s':
-    //         if(1960 <= year && year <= 1969){
-    //             movieDisplayELem.style.display = 'block';    
-    //         }else{
-    //             movieDisplayELem.style.display = 'none';
-    //         }
-    //         break;
-    //     case '1970s':
-    //         if(1970 <= year && year <= 1979){
-    //             movieDisplayELem.style.display = 'block';    
-    //         }else{
-    //             movieDisplayELem.style.display = 'none';
-    //         }
-    //         break;
-    //     case '1980s':
-    //         if(1980 <= year && year <= 1989){
-    //             movieDisplayELem.style.display = 'block';    
-    //         }else{
-    //             movieDisplayELem.style.display = 'none';
-    //         }
-    //         break;
-    //     case '1990s':
-    //         if(1990 <= year && year <= 1999){
-    //             movieDisplayELem.style.display = 'block';    
-    //         }else{
-    //             movieDisplayELem.style.display = 'none';
-    //         }
-    //         break;
-    //     case '2000s':
-    //         if(2000 <= year && year <= 2009){
-    //             movieDisplayELem.style.display = 'block';    
-    //         }else{
-    //             movieDisplayELem.style.display = 'none';
-    //         }
-    //         break;
-    //     case '2010s':
-    //         if(2010 <= year && year <= 2019){
-    //             movieDisplayELem.style.display = 'block';    
-    //         }else{
-    //             movieDisplayELem.style.display = 'none';
-    //         }
-    //         break;
-    //     case '2020s':
-    //         if(2020 <= year && year <= 2024){
-    //             movieDisplayELem.style.display = 'block';    
-    //         }else{
-    //             movieDisplayELem.style.display = 'none';
-    //         }
-    //         break;
-    // }
+    const selectedOption = event.target.value;
+    console.log(selectedOption);
+    
+    switch(selectedOption){
+        case 'None':
+            movieDisplayELem.style.display = 'block';
+            break;
+        case '1950s':
+            if(1950 <= year && year <= 1959){
+                movieDisplayELem.style.display = 'block';
+            }else{
+                movieDisplayELem.style.display = 'none';
+            }
+            break;
+        case '1960s':
+            if(1960 <= year && year <= 1969){
+                movieDisplayELem.style.display = 'block';    
+            }else{
+                movieDisplayELem.style.display = 'none';
+            }
+            break;
+        case '1970s':
+            if(1970 <= year && year <= 1979){
+                movieDisplayELem.style.display = 'block';    
+            }else{
+                movieDisplayELem.style.display = 'none';
+            }
+            break;
+        case '1980s':
+            if(1980 <= year && year <= 1989){
+                movieDisplayELem.style.display = 'block';    
+            }else{
+                movieDisplayELem.style.display = 'none';
+            }
+            break;
+        case '1990s':
+            if(1990 <= year && year <= 1999){
+                movieDisplayELem.style.display = 'block';    
+            }else{
+                movieDisplayELem.style.display = 'none';
+            }
+            break;
+        case '2000s':
+            if(2000 <= year && year <= 2009){
+                movieDisplayELem.style.display = 'block';    
+            }else{
+                movieDisplayELem.style.display = 'none';
+            }
+            break;
+        case '2010s':
+            if(2010 <= year && year <= 2019){
+                movieDisplayELem.style.display = 'block';    
+            }else{
+                movieDisplayELem.style.display = 'none';
+            }
+            break;
+        case '2020s':
+            if(2020 <= year && year <= 2024){
+                movieDisplayELem.style.display = 'block';    
+            }else{
+                movieDisplayELem.style.display = 'none';
+            }
+            break;
+    }
 })
