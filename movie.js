@@ -1,12 +1,12 @@
 const searchBar = document.querySelector(".browse__searchbar");
-const movieDisplayELem = document.querySelector(".movie__display");
+// const oldMovieDisplayELem = document.querySelector(".movie__display");
 const releaseDate = document.querySelector(".movie__year");
 const loading = document.querySelector(".movie__loading--state");
 const searchBtn = document.querySelector(".browse__search--icon");
 const optionSelect = document.querySelector("#years");
 const query = localStorage.getItem("query");
 
-movieDisplayELem.classList += " movie__display--hidden";
+// oldMovieDisplayELem.classList += " movie__display--hidden";
 loading.classList += " loading__state";
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -62,15 +62,12 @@ function showLoading() {
 // }
 
 async function searchMovies() {
-  //     const movieDisplayContainer = document.querySelector('.row');
   const searchTerm = searchBar.value;
   const response = await fetch(
     `https://www.omdbapi.com/?apikey=6d4005a9&s=${searchTerm}`
   );
   const data = await response.json();
-
-  // Clear previous results
-  document.querySelector(".movie__display").remove(); // remove template
+  const movieDisplayELem = document.querySelector(".movie__container");
 
   // Create a card for each movie
   data.Search.forEach((movie) => {
@@ -92,10 +89,18 @@ async function searchMovies() {
   });
 }
 
+function clearMovies() {
+  const movieCards = document.querySelectorAll(".movie-card");
+  movieCards.forEach((card) => {
+    card.remove();
+  });
+}
+
 function fetchData() {
+  clearMovies();
   showLoading();
   setTimeout(() => {
-    movieDisplayELem.classList.remove("movie__display--hidden");
+    // oldMovieDisplayELem.classList.remove("movie__display--hidden");
     loading.classList += " loading__state--hidden";
     searchMovies();
   });
@@ -105,8 +110,7 @@ function showHomePage() {
   window.location.href = `${window.location.origin}/index.html#`;
 }
 
-optionSelect.addEventListener("change", async (event) => {
-  const data = await searchMovies();
+optionSelect.addEventListener("change", function (event) {
   const selectedOption = event.target.value;
   const movieCards = document.querySelectorAll(".movie__display");
   movieCards.forEach((card) => {
@@ -115,7 +119,7 @@ optionSelect.addEventListener("change", async (event) => {
     console.log(selectedOption);
     switch (selectedOption) {
       case "None":
-        card.style.display.style.display = "block";
+        card.style.display = "block";
         break;
       case "1950s":
         if (1950 <= year && year <= 1959) {

@@ -61,8 +61,8 @@
                         <select name="years" id="years">
                             <option value="None" class="filter__option">Select a decade</option>
                             <option value="2020s" class="filter__option" onclick="chooseDecade(event)">2020 - 2024</option>
-                            <option value="2000s" class="filter__option" onclick="chooseDecade(event)">2000 - 2009</option>
                             <option value="2010s" class="filter__option" onclick="chooseDecade(event)">2010 - 2019</option>
+                            <option value="2000s" class="filter__option" onclick="chooseDecade(event)">2000 - 2009</option>
                             <option value="1990s" class="filter__option" onclick="chooseDecade(event)">1990 - 1999</option>
                             <option value="1980s" class="filter__option" onclick="chooseDecade(event)">1980 - 1989</option>
                             <option value="1970s" class="filter__option" onclick="chooseDecade(event)">1970 - 1979</option>
@@ -74,15 +74,16 @@
                 <div class="movie__loading--state">
                     <i class="fa-solid fa-spinner books__loading--spinner"></i>
                 </div>
-                <div class="movie__display movie-card">
-                    <figure class="movie__poster--wrapper">
-                        <!-- <img src="./Assets/dotted__pattern__top2bottom.png" class="movie__tag--overlay" alt=""> -->
-                        <img src="" class="movie__poster" alt="">
-                    </figure>
-                    <div class="movie__info">
-                        <h3 class="movie__title">Movie Title</h3>
-                        <div id="movie__year">Release Date</div>
-                    </div>
+                <div class="movie__container">
+                    <!-- <div class="movie__display movie-card">
+                        <figure class="movie__poster--wrapper">
+                            <img src="" class="movie__poster" alt="">
+                        </figure>
+                        <div class="movie__info">
+                            <h3 class="movie__title">Movie Title</h3>
+                            <div id="movie__year">Release Date</div>
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </div>

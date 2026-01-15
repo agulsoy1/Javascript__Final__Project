@@ -449,6 +449,15 @@ MOVIE TOP
     }
 }
 
+.movie__container{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
 .movie__display{
     /* position: relative; */
     display: flex;
