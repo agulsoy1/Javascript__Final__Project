@@ -12,41 +12,60 @@
 <body>
     <section id="top">
         <figure class="bg__img--wrapper">
-                <img src="./Assets/movie__bg__img.png" alt="" class="bg__img">
-                <div class="bg__img--overlay"></div>
+            <img src="./Assets/movie__bg__img.png" alt="" class="bg__img">
+            <div class="bg__img--overlay"></div>
         
-        <nav class="nav__browse">
-            <figure class="nav__logo--wrapper">
-                <img src="./Assets/blinker-icon.4f9b2663.png" class="nav__logo nav__logo--white" alt="">
-            </figure>
-            <ul class="nav__links">
-                <li class="nav__link--item" onclick="showHomePage()">
-                    <a href="#" class="
-                    nav__link nav__link--white
-                    link__hover-effect
-                    link__hover-effect--white">Home</a>
-                </li>
-                <li class="nav__link--item">
-                    <a href="#" class="
-                    nav__link nav__link--white 
-                    link__hover-effect 
-                    link__hover-effect--white">Find your movie</a>
-                </li>
-                <li class="nav__link--btn">
-                    <button class="nav__btn nav__btn--contrast">
-                        CONTACT
-                        <!-- <a href="#" target="_blank" class="btn__link"></a> -->
+            <nav class="nav__browse">
+                <figure class="nav__logo--wrapper">
+                    <img src="./Assets/blinker-icon.4f9b2663.png" class="nav__logo nav__logo--white" alt="">
+                </figure>
+                <ul class="nav__links">
+                    <li class="nav__link--item" onclick="showHomePage()">
+                        <a href="#" class="
+                        nav__link nav__link--white
+                        link__hover-effect
+                        link__hover-effect--white">Home</a>
+                    </li>
+                    <li class="nav__link--item">
+                        <a href="#" class="
+                        nav__link nav__link--white 
+                        link__hover-effect 
+                        link__hover-effect--white">Find your movie</a>
+                    </li>
+                    <li class="nav__link--btn">
+                        <button class="nav__btn nav__btn--contrast">
+                            CONTACT
+                            <!-- <a href="#" target="_blank" class="btn__link"></a> -->
+                        </button>
+                    </li>
+                </ul>
+                <button class="btn__menu" onclick="openMenu()">
+                    <i class="fa-solid fa-bars menu__icon--white"></i>
+                </button>
+                <div class="menu__backdrop">
+                    <button class="btn__menu btn__close--menu" onclick="closeMenu()">
+                        <i class="fa-solid fa-x menu__icon--white"></i>
                     </button>
-                </li>
-            </ul>
-        </nav>
-        <div class="top__info">
-            <h1 class="browse__title">Browse our movies</h1>
-            <div class="browse__search">
-                <input type="text" class="browse__searchbar" placeholder="Search by Title, or Keyword">
-                <i class="fa-solid fa-magnifying-glass browse__search--icon" onclick="searchMovies(event)"></i>
+                    <ul class="menu__links">
+                        <li class="menu__link">
+                            <a href="index.html" class="menu__link--anchor" onclick="closeMenu()">Home</a>
+                        </li>
+                        <li class="menu__link">
+                            <a href="#" class="menu__link--anchor" onclick="closeMenu()">Find your movie</a>
+                        </li>
+                        <li class="menu__link">
+                            <a href="#mailto:alexandretg99@gmail.com" class="menu__link--anchor" onclick="closeMenu()">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="top__info">
+                <h1 class="browse__title">Browse our movies</h1>
+                <div class="browse__search">
+                    <input type="text" class="browse__searchbar" placeholder="Search by Title, or Keyword">
+                    <i class="fa-solid fa-magnifying-glass browse__search--icon" onclick="searchMovies(event)"></i>
+                </div>
             </div>
-        </div>
         </figure>
     </section>
     <section id="middle">
@@ -59,7 +78,7 @@
                     <p class="middle__para">
                         <label for="years" class="filter__options">Choose a <span class="purple">Decade:</span></label>
                         <select name="years" id="years">
-                            <option value="None" class="filter__option">Select a decade</option>
+                            <option value="None" class="filter__option">None</option>
                             <option value="2020s" class="filter__option" onclick="chooseDecade(event)">2020 - 2024</option>
                             <option value="2010s" class="filter__option" onclick="chooseDecade(event)">2010 - 2019</option>
                             <option value="2000s" class="filter__option" onclick="chooseDecade(event)">2000 - 2009</option>
@@ -68,23 +87,15 @@
                             <option value="1970s" class="filter__option" onclick="chooseDecade(event)">1970 - 1979</option>
                             <option value="1960s" class="filter__option" onclick="chooseDecade(event)">1960 - 1969</option>
                             <option value="1950s" class="filter__option" onclick="chooseDecade(event)">1950 - 1959</option>
+                            <option value="1940s" class="filter__option" onclick="chooseDecade(event)">1940 - 1949</option>
+                            <option value="1930s" class="filter__option" onclick="chooseDecade(event)">1930 - 1939</option>
                         </select>
                     </p>
                 </div>
                 <div class="movie__loading--state">
                     <i class="fa-solid fa-spinner books__loading--spinner"></i>
                 </div>
-                <div class="movie__container">
-                    <!-- <div class="movie__display movie-card">
-                        <figure class="movie__poster--wrapper">
-                            <img src="" class="movie__poster" alt="">
-                        </figure>
-                        <div class="movie__info">
-                            <h3 class="movie__title">Movie Title</h3>
-                            <div id="movie__year">Release Date</div>
-                        </div>
-                    </div> -->
-                </div>
+                <div class="movie__container"></div>
             </div>
         </div>
     </section>

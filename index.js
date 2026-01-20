@@ -20,3 +20,11 @@ function showMovieBrowser(){
     localStorage.setItem("query", homeSearchTerm);
     window.location.href = `${window.location.origin}/movie.html#`;
 }
+
+function openMenu(){
+    document.body.classList += " menu--open";
+}
+
+function closeMenu(){
+    document.body.classList.remove("menu--open");
+}
