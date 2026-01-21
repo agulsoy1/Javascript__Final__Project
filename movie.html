@@ -61,9 +61,13 @@
             </nav>
             <div class="top__info">
                 <h1 class="browse__title">Browse our movies</h1>
-                <div class="browse__search">
-                    <input type="text" class="browse__searchbar" placeholder="Search by Title, or Keyword">
-                    <i class="fa-solid fa-magnifying-glass browse__search--icon" onclick="searchMovies(event)"></i>
+                <div class="browse__search--wrapper">
+                    <div class="browse__search">
+                        <input type="text" class="browse__searchbar" placeholder="Search by Title, or Keyword">
+                        <figure class="browse__search-icon--wrapper">
+                            <i class="fa-solid fa-magnifying-glass browse__search--icon" onclick="searchMovies(event)"></i>
+                        </figure>
+                    </div>
                 </div>
             </div>
         </figure>
