@@ -78,7 +78,6 @@ nav {
 
 .nav__link {
   position: relative;
-
   color: black;
 }
 
@@ -278,20 +277,18 @@ HEADER
 }
 
 .header__img--wrapper {
-  position: relative;
+  /* position: relative; */
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  /* width: 100%; */
+  width: 100%;
   max-width: 800px;
 }
 
 .header__img {
-  position: absolute;
+  /* position: absolute; */
   top: 3vw;
-  /* width: 80vh; */
-  /* height: 50vh; */
   overflow: hidden;
   width: 100%;
 }
@@ -621,6 +618,61 @@ MOVIE TOP
   font-weight: 500;
 }
 
+/* 
+
+FOOTER
+
+*/
+
+#footer__section{
+  position: absolute;
+  bottom: 0;
+  margin-top: 40px;
+  background-color: black;
+  width: 100%;
+}
+
+#footer__movie--section{
+  position: static;
+  bottom: 0;
+  background-color: black;
+  width: 100%;
+}
+
+.footer__background{
+  margin: 25px 0;
+  /* height: 100vh; */
+}
+
+.footer__info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer__logo--wrapper{
+  width: 100%;
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer__nav--links{
+  margin-bottom: 30px;
+  display: flex;
+  margin-left: 60px;
+}
+
+.footer__nav--link{
+  position: relative;
+}
+
+.footer__copyright{
+  color: white;
+}
+
+
 @media (max-width: 768px) {
   .header__title {
     font-size: 42px;
@@ -633,9 +685,7 @@ MOVIE TOP
   .header__search--bar {
     width: 50%;
   }
-}
 
-@media (max-width: 768px) {
   .nav__link--item {
     padding: 16px;
     font-size: 16px;

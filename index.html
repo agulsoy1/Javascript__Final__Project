@@ -14,75 +14,115 @@
     <script src="movie.js" defer></script>
 
 </head>
+
 <body>
-    <nav>
-        <div class="nav__section--home">
-            <figure class="nav__logo--wrapper">
-                <img src="./Assets/blinker-icon.4f9b2663.png" class="nav__logo" alt="">
-            </figure>
-            <ul class="nav__links">
-                <li class="nav__link--item">
-                    <a href="#" class="
-                    nav__link
-                    link__hover-effect 
-                    link__hover-effect--black">Home</a>
-                </li>
-                <li class="nav__link--item" onclick="showMovieBrowser()">
-                    <a href="#" class="
-                    nav__link 
-                    link__hover-effect 
-                    link__hover-effect--black">Find your movie</a>
-                </li>
-                <li class="nav__link--btn">
-                    <button class="nav__btn">
-                        CONTACT
-                        <!-- <a href="#" target="_blank" class="btn__link">CONTACT</a> -->
-                    </button>
-                </li>
-            </ul>
-            <button class="btn__menu" onclick="openMenu()">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <div class="menu__backdrop">
-                <button class="btn__menu btn__close--menu" onclick="closeMenu()">
-                    <i class="fa-solid fa-x"></i>
-                </button>
-                <ul class="menu__links">
-                    <li class="menu__link">
-                        <a href="#" class="menu__link--anchor" onclick="closeMenu()">Home</a>
+    <main id="movie__main">
+        <nav>
+            <div class="nav__section--home">
+                <figure class="nav__logo--wrapper">
+                    <img src="./Assets/blinker-icon.4f9b2663.png" class="nav__logo" alt="">
+                </figure>
+                <ul class="nav__links">
+                    <li class="nav__link--item">
+                        <a href="#" class="
+                        nav__link
+                        link__hover-effect 
+                        link__hover-effect--black">Home</a>
                     </li>
-                    <li class="menu__link">
-                        <a href="movie.html" class="menu__link--anchor" onclick="closeMenu()">Find your movie</a>
+                    <li class="nav__link--item" onclick="showMovieBrowser()">
+                        <a href="#" class="
+                        nav__link 
+                        link__hover-effect 
+                        link__hover-effect--black">Find your movie</a>
                     </li>
-                    <li class="menu__link">
-                        <a href="#mailto:alexandretg99@gmail.com" class="menu__link--anchor" onclick="closeMenu()">Contact</a>
+                    <li class="nav__link--btn">
+                        <button class="nav__btn">
+                            CONTACT
+                            <!-- <a href="#" target="_blank" class="btn__link">CONTACT</a> -->
+                        </button>
                     </li>
                 </ul>
+                <button class="btn__menu" onclick="openMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="menu__backdrop">
+                    <button class="btn__menu btn__close--menu" onclick="closeMenu()">
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                    <ul class="menu__links">
+                        <li class="menu__link">
+                            <a href="#" class="menu__link--anchor" onclick="closeMenu()">Home</a>
+                        </li>
+                        <li class="menu__link">
+                            <a href="movie.html" class="menu__link--anchor" onclick="closeMenu()">Find your movie</a>
+                        </li>
+                        <li class="menu__link">
+                            <a href="#mailto:alexandretg99@gmail.com" class="menu__link--anchor"
+                                onclick="closeMenu()">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+        <section id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="header__info">
+                        <h1 class="header__title">
+                            US's Most Awarded Video Rental Service Platform
+                        </h1>
+                        <h2 class="header__sub-title">
+                            KICK BACK AND WATCH A MOVIE <span class="purple">BLINKER</span>
+                        </h2>
+                        <div class="header__search">
+                            <input type="text" placeholder="Search by Title, or Keyword" class="header__search--bar">
+                            <button class="header__search--icon" onclick="movieBrowser(event)">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <figure class="header__img--wrapper">
+                        <img src="./Assets/watching__tv__illustration.png" alt="" class="header__img">
+                    </figure>
+                </div>
             </div>
-        </div>
-    </nav>
-    <section id="header">
+        </section>
+    </main>
+    <footer id="footer__section">
         <div class="container">
             <div class="row">
-                <div class="header__info">
-                    <h1 class="header__title">
-                        US's Most Awarded Video Rental Service Platform
-                    </h1>
-                    <h2 class="header__sub-title">
-                        KICK BACK AND WATCH A MOVIE <span class="purple">BLINKER</span>
-                    </h2>
-                    <div class="header__search">
-                        <input type="text" placeholder="Search by Title, or Keyword" class="header__search--bar">
-                        <button class="header__search--icon" onclick="movieBrowser(event)">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
+                <div class="footer__background">
+                    <div class="footer__info">
+                        <figure class="footer__logo--wrapper">
+                            <img src="./Assets/blinker-icon.4f9b2663.png" class="nav__logo" alt="">
+                        </figure>
+                        <ul class="footer__nav--links">
+                            <li class="nav__link--item">
+                                <a href="#" class="
+                                    footer__nav--link
+                                    link__hover-effect 
+                                    link__hover-effect--white">Home</a>
+                            </li>
+                            <li class="nav__link--item" onclick="showMovieBrowser()">
+                                <a href="#" class="
+                                    footer__nav--link 
+                                    link__hover-effect 
+                                    link__hover-effect--white">Find your movie</a>
+                            </li>
+                            <li class="nav__link--item" onclick="showMovieBrowser()">
+                                <a href="#" class="
+                                    footer__nav--link 
+                                    link__hover-effect 
+                                    link__hover-effect--white">Contact</a>
+                            </li>
+                        </ul>
+                        <div class="footer__copyright">
+                            Copyright <i class="fa-regular fa-copyright"></i> 2026 Blinker
+                        </div>
                     </div>
                 </div>
-                <figure class="header__img--wrapper">
-                    <img src="./Assets/watching__tv__illustration.png" alt="" class="header__img">
-                </figure>
             </div>
         </div>
-    </section>
+    </footer>
 </body>
+
 </html>
